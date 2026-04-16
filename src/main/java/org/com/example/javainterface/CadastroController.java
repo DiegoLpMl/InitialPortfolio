@@ -31,7 +31,7 @@ public class CadastroController {
         String senha = txtSenha.getText();
         String email = txtEmail.getText();
         String getHash = BCrypt.hashpw(senha, BCrypt.gensalt(12));
-        user.User_Create(nome, senha, email);
+        user.User_Create(nome, getHash, email);
 
         lblMensagem.setText("Usuario Cadastrado com sucesso!");
 
@@ -40,18 +40,18 @@ public class CadastroController {
             alerta.setTitle("Preencha todos os campos");
             alerta.setHeaderText("Preencha todos os campos");
             alerta.showAndWait();
-            HelloApplication.trocadorDeTelas("login.fxml");
             TranslateTransition tt = new TranslateTransition(Duration.seconds(4), lblMensagem);
         }
         else {
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setTitle("Usuario Cadastrado com sucesso!");
+            HelloApplication.trocadorDeTelas("login.fxml");
             alerta.setHeaderText("Usuario Cadastrado com sucesso!");
             txtNome.clear();
             txtSenha.clear();
             txtEmail.clear();
             alerta.showAndWait();
-            TranslateTransition tt = new TranslateTransition(Duration.seconds(2), lblMensagem);
+            TranslateTransition tt2 = new TranslateTransition(Duration.seconds(2), lblMensagem);
         }
 
 

@@ -31,7 +31,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
             </TextField>
-            <PasswordField maxHeight="40.0" maxWidth="250.0" minHeight="35.0" minWidth="50.0" prefHeight="25.0" prefWidth="200.0" promptText="Nova Senha" styleClass="input">
+            <PasswordField fx:id="passUsuario" maxHeight="40.0" maxWidth="250.0" minHeight="35.0" minWidth="50.0" prefHeight="25.0" prefWidth="200.0" promptText="Nova Senha" styleClass="input">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>

@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+import org.mindrot.jbcrypt.BCrypt;
 
 public class UserDAO {
     public void User_Create(String nome, String senha, String email) throws SQLException {
@@ -36,7 +36,7 @@ public class UserDAO {
                 if (rs.next()) {
                     String senhaDoBanco = rs.getString("senha");
 
-                    if (senha.equals(senhaDoBanco))
+                    if (BCrypt.checkpw(senha, senhaDoBanco))
                         return true; // retorna o acesso do usuario
                     else {
                         return false; //senha incorretar

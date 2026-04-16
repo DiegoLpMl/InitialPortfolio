@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
-
+import org.mindrot.jbcrypt.BCrypt;
 
 
 import java.io.IOException;
@@ -31,6 +31,7 @@ public class LoginController {
         String usuarioDigitado = txtUsuario.getText();
         String senhaDigitada = passUsuario.getText();
         String emailDigitado = emailUsuario.getText();
+
 
         boolean User_Login = UserDAO.User_Login(usuarioDigitado, senhaDigitada, emailDigitado);
 
