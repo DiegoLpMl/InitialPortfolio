@@ -1,4 +1,4 @@
-package org.com.example.javainterface;git   
+package org.com.example.javainterface;
 
 import javafx.application.Application;
 

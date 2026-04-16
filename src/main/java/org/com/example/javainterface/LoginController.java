@@ -7,6 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
+
+
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginController {
@@ -20,7 +23,9 @@ public class LoginController {
     protected Label txtMessage;
 
     @FXML
-    protected void onLoginButtonClick() throws SQLException {
+    protected void onLoginButtonClick() throws SQLException, IOException {
+
+
         UserDAO user = new UserDAO();
 
         String usuarioDigitado = txtUsuario.getText();
@@ -30,11 +35,13 @@ public class LoginController {
         boolean User_Login = UserDAO.User_Login(usuarioDigitado, senhaDigitada, emailDigitado);
 
         if(User_Login)
-            txtMessage.setText("Login efetuado com sucesso");
+            HelloApplication.trocadorDeTelas("cadastro.fxml");
         else{
             txtMessage.setText("usuario, Senha ou Email errados");
         }
-    }@FXML
+    }
+
+    @FXML
     private Button loginButton;
 
     @FXML
@@ -51,6 +58,12 @@ public class LoginController {
             tt.setToY(0);
             tt.play();
         });
+    }
+
+    @FXML
+    protected void onNovoPorAquiClick() throws IOException {
+
+        HelloApplication.trocadorDeTelas("cadastro.fxml");
     }
 
 }

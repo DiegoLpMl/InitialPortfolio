@@ -6,6 +6,7 @@ module org.com.example.javainterface {
     requires java.sql;
     requires java.desktop;
     requires atlantafx.base;
+    requires jbcrypt;
 
     opens org.com.example.javainterface to javafx.fxml;
     exports org.com.example.javainterface;
