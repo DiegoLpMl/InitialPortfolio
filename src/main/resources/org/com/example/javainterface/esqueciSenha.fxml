@@ -21,17 +21,17 @@
                   <Font name="Calibri Italic" size="24.0" />
                </font>
             </Label>
-            <PasswordField maxHeight="40.0" maxWidth="250.0" minHeight="35.0" minWidth="50.0" prefHeight="25.0" prefWidth="250.0" promptText="Nova Senha" styleClass="input">
+            <PasswordField fx:id="txtNovaSenha" maxHeight="40.0" maxWidth="250.0" minHeight="35.0" minWidth="50.0" prefHeight="25.0" prefWidth="250.0" promptText="Nova Senha" styleClass="input">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
             </PasswordField>
-            <PasswordField maxHeight="40.0" maxWidth="250.0" minHeight="35.0" minWidth="50.0" prefHeight="25.0" prefWidth="200.0" promptText="Confirmar Senha" styleClass="input">
+            <PasswordField fx:id="txtConfirmarSenha" maxHeight="40.0" maxWidth="250.0" minHeight="35.0" minWidth="50.0" prefHeight="25.0" prefWidth="200.0" promptText="Confirmar Senha" styleClass="input">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </PasswordField>
-            <Button mnemonicParsing="false" text="Confirmar">
+            <Button mnemonicParsing="false" onAction="#onClickConfirmarSenha" text="Confirmar">
                <VBox.margin>
                   <Insets top="25.0" />
                </VBox.margin>

@@ -1,0 +1,51 @@
+.button {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+
+    /* Gradiente azul → roxo (topo → base) */
+    -fx-background-color: linear-gradient(to bottom, darkblue, purple);
+
+    -fx-text-fill: #000000;
+
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+
+    -fx-padding: 10px 20px;
+
+    /* simula a "camada de baixo" */
+    -fx-effect: dropshadow(gaussian, #000000, 0, 0, 0, 4);
+
+    -fx-translate-y: -3px;
+}
+
+/* Hover (sobe mais) */
+.button:hover {
+    -fx-translate-y: -5px;
+}
+
+/* Clique (desce) */
+.button:pressed {
+    -fx-translate-y: 0;
+    -fx-effect: none;
+}
+
+.input {
+    -fx-pref-height: 40px;
+    -fx-pref-width: 200px;
+
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+
+    /* Aqui está o truque da borda com gradiente */
+    -fx-background-insets: 0, 2;
+    -fx-background-color:
+            linear-gradient(to bottom, rgb(128, 0, 128), rgb(0, 0, 139)),
+            white;
+
+    -fx-padding: 0 0 0 15px;
+
+    -fx-text-fill: rgb(19, 19, 19);
+    -fx-font-size: 13.4px;
+}

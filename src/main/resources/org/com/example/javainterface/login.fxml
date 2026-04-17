@@ -38,11 +38,12 @@
                   <Insets />
                </VBox.margin>
             </Button>
-            <Hyperlink text="E novo por aqui?">
+            <Hyperlink onAction="#onNovoPorAquiClick" text="E novo por aqui?">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
             </Hyperlink>
+            <Hyperlink onAction="#onEsqueciSenhaClick" text="Esqueceu a Senha?" />
             <Label fx:id="txtMessage">
                <VBox.margin>
                   <Insets top="25.0" />
