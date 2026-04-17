@@ -7,6 +7,7 @@ module org.com.example.javainterface {
     requires java.desktop;
     requires atlantafx.base;
     requires jbcrypt;
+    requires jakarta.mail;
 
     opens org.com.example.javainterface to javafx.fxml;
     exports org.com.example.javainterface;

@@ -64,6 +64,10 @@ public class LoginController {
 
         HelloApplication.trocadorDeTelas("cadastro.fxml");  
     }
+    @FXML
+    protected void onEsqueciSenhaClick() throws IOException {
+        HelloApplication.trocadorDeTelas("confirmarEmail.fxml");
+    }
 
 }
 
