@@ -6,8 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
-import org.mindrot.jbcrypt.BCrypt;
-
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -64,7 +62,7 @@ public class LoginController {
     @FXML
     protected void onNovoPorAquiClick() throws IOException {
 
-        HelloApplication.trocadorDeTelas("cadastro.fxml");
+        HelloApplication.trocadorDeTelas("cadastro.fxml");  
     }
 
 }
