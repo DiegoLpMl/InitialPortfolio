@@ -1,8 +1,8 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Services;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-public class SenhaUtil {
+public class SenhaService {
     public static String hashSenha(String codigo){
         return BCrypt.hashpw(codigo, BCrypt.gensalt());
 

@@ -1,9 +1,15 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.com.example.javainterface.*;
+import org.com.example.javainterface.DTBClasses.UserDAO;
+import org.com.example.javainterface.DTBClasses.Usuario;
+import org.com.example.javainterface.Services.SenhaService;
+import org.com.example.javainterface.Services.SessaoService;
+import org.com.example.javainterface.Services.resetarSenhaService;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -41,7 +47,7 @@ public class emailController {
             return;
         }
         else {
-            Sessao.setEmailAtual(email); // salva o email na sessão
+            SessaoService.setEmailAtual(email); // salva o email na sessão
             resetarSenhaService.solicitaReset(email);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Email enviado");
@@ -69,7 +75,7 @@ public class emailController {
             alert.setHeaderText("Codigo invalido");
         }
 
-        boolean verifica = SenhaUtil.verificaSenha(codigo, usuario.getToken());
+        boolean verifica = SenhaService.verificaSenha(codigo, usuario.getToken());
 
         if(verifica) {
             HelloApplication.trocadorDeTelas("esqueciSenha.fxml");

@@ -1,4 +1,4 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.DTBClasses;
 
 import org.mindrot.jbcrypt.BCrypt;
 

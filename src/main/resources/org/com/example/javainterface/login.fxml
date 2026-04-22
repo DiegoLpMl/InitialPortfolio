@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../../CSS/StyleLoginFXML.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.com.example.javainterface.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../../CSS/StyleLoginFXML.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.com.example.javainterface.Controllers.LoginController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="602.0" stylesheets="@../../../../CSS/StyleLoginFXML.css" BorderPane.alignment="CENTER_RIGHT">
          <children>
@@ -46,7 +46,8 @@
                   <Insets top="10.0" />
                </VBox.margin>
             </Hyperlink>
-            <Label fx:id="txtMessage">
+            <Hyperlink onAction="#onEsqueciSenhaClick" text="Esqueceu sua senha?" />
+            <Label fx:id="txtMessage" prefHeight="17.0" prefWidth="0.0">
                <VBox.margin>
                   <Insets top="25.0" />
                </VBox.margin>

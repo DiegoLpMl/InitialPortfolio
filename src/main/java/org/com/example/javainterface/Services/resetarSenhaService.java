@@ -1,4 +1,7 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Services;
+
+import org.com.example.javainterface.DTBClasses.UserDAO;
+import org.com.example.javainterface.DTBClasses.Usuario;
 
 import java.security.SecureRandom;
 import java.sql.SQLException;
@@ -11,7 +14,7 @@ public class resetarSenhaService {
             throw new RuntimeException("Usuario nao encontrado");
         }
         String codigo = String.format("%08d", new SecureRandom().nextInt(99999999));
-        String codigoHash = SenhaUtil.hashSenha(codigo);
+        String codigoHash = SenhaService.hashSenha(codigo);
 
         UserDAO.salvarToken(email, codigoHash);
 
@@ -29,16 +32,16 @@ public class resetarSenhaService {
 
     }
     public static void resetSenha(String novaSenha) throws SQLException {
-        String email = Sessao.getEmailAtual();
+        String email = SessaoService.getEmailAtual();
 
     if(email == null) {
         throw new RuntimeException("Sessao expirada");
     }
 
-    String novaSenhaHash = SenhaUtil.hashSenha(novaSenha);
+    String novaSenhaHash = SenhaService.hashSenha(novaSenha);
     UserDAO.atualizarSenha(email, novaSenhaHash);
     UserDAO.deletarToken(email);
-    Sessao.setEmailAtual(null);
+    SessaoService.setEmailAtual(null);
     }
 
 

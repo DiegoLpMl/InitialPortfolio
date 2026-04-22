@@ -1,14 +1,16 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Controllers;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
 import java.io.IOException;
 import java.sql.SQLException;
+
+import org.com.example.javainterface.HelloApplication;
+import org.com.example.javainterface.DTBClasses.UserDAO;
 import org.mindrot.jbcrypt.BCrypt;
 
 

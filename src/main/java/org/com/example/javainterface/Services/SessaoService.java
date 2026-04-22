@@ -1,6 +1,6 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Services;
 
-public class Sessao {
+public class SessaoService {
     private static String emailAtual;
 
     public static String getEmailAtual()              { return emailAtual; }

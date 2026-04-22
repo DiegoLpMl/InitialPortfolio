@@ -1,4 +1,4 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Services;
 
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;

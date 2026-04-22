@@ -1,10 +1,11 @@
-package org.com.example.javainterface;
+package org.com.example.javainterface.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
+import org.com.example.javainterface.HelloApplication;
+import org.com.example.javainterface.Services.resetarSenhaService;
 
-import java.awt.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
